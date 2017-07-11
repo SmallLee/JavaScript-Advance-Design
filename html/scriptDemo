@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script src="../js/hello.js" defer="defer">
+			
+		</script>
+		<div id="app" style="width: 100px;height: 100px;"></div>
+	</body>
+</html>
+<!--
+	defer:适用于外部脚本，延迟到文档加载结束才执行，延迟脚本总是按照它们的顺序执行
+	async:适用于外部脚本，表示当前脚本不必等待其他脚本，也不必阻塞文档呈现，不按照顺序执行
+	
+-->

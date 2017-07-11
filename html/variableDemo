@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var message;
+			alert(message==undefined);//true
+			alert(null==undefined)//true
+		</script>
+	</body>
+</html>
+<!--
+	如果变量意在保存对象，应该初始化为null
+	undefined派生自null
+-->

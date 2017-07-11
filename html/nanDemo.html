@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			console.log(typeof NaN)//number
+			console.log(NaN==NaN)//false
+			console.log(0/0)//NaN
+			console.log(isNaN(NaN));//true
+			console.log(isNaN("13"));//false
+			console.log(isNaN("blue"))//true
+		</script>
+	</body>
+</html>
+<!--
+	NaN不与任何数相等，包括自己
+	0/0得到NaN
+	isNaN试图将一个数转化为数字，如果转化失败，返回true
+-->

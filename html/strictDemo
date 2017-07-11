@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<script>
+			function text(){
+				"use strict"
+				message = "haha";
+			}
+			text();
+			alert(message)
+		</script>
+	</body>
+</html>
+<!--
+	启用严格模式：在脚本上写"use strict"
+	或者在方法的内部写
+	Uncaught ReferenceError: message is not defined"
+-->

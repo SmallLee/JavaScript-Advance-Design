@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var message = "adf";
+			var messageAsBoolean= Boolean(message);
+			alert(messageAsBoolean)//true
+			//message自动转化为boolean类型的true
+			if (message){
+				alert('true')
+			}
+		</script>
+	</body>
+</html>
+<!--
+	通过Boolean函数可以把其他值转为boolean
+	
+-->

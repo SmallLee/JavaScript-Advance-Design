@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+//			var s = null;
+//			s = undefined;
+			var s = 10;
+			console.log(s.toString(2));//1010
+			console.log(s.toString(8));//12
+			console.log(s.toString(10));//10
+			console.log(s.toString(16));//a
+			var n = null;//null
+			n = undefined;//undefined
+			console.log(String(n));
+		</script>
+	</body>
+</html>
+<!--
+	toString不能用在null和undefined
+	再不知道要转化的数是不是上面两种类型的时候，可以使用String()函数来转化
+-->
