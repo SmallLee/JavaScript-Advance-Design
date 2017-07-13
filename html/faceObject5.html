@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var person = {};
+			Object.defineProperty(person,"name",{
+				configurable:true,
+				writable:true,
+				value:"zhangsan"
+			});
+			var des = Object.getOwnPropertyDescriptor(person,"name");
+//			for (var p in des) {
+//				console.log(p+"--"+des[p]);
+//			} 
+			console.log(des.enumerable)
+		</script>
+	</body>
+</html>

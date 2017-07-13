@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var str = "cat,bat,fat,mat";
+			console.log(str.replace("at","dd"));//cdd,bat,fat,mat
+			var str = "cat,bat,fat,mat";
+			console.log(str.replace(/at/g,"dd"));//cdd,bdd,fdd,mdd
+		</script>
+	</body>
+</html>
+<!--
+	replace方法：如果第一个参数是字符串，则只替换第一个
+	要想替换所有的，第一个参数要提供正则表达式，并且提供全局模式g
+-->

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			function Person(name,age,address){
+				this.name = name;
+				this.age = age;
+				this.address = address;
+				this.say = new Function("alert(this.name)")
+			}
+			var p1 = new Person('zhangsan',22,"beijing");
+			p1.say();
+		</script>
+	</body>
+</html>
+<!--
+	构造函数的问题：
+	每个方法都要在每个实例里面创建一次，两个函数的作用是一样的，这样没有必要
+-->

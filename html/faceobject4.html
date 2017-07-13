@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var book = {};
+			Object.defineProperties(book,{
+				name:{
+					writeable:true,
+					value:'newbook'
+				},
+				price:{
+					configurable:false,
+					value:123
+				},
+				get:function(){
+					return this.price;
+				}
+			});
+			console.log(book.price)
+			delete book.price;
+			console.log(book.price)
+		</script>
+	</body>
+</html>
+<!--
+	定义多个属性
+	
+-->

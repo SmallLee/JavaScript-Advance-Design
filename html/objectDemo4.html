@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var global= function(){
+				return this;
+			}
+			console.log(global());//[object Window]
+			var value = [12,32,44,51,2];
+			var max = Math.max.apply(Math,value);
+			console.log(max);//51
+		</script>
+	</body>
+</html>

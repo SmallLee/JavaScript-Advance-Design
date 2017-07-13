@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var str = "http://www.wrox.com/illegal value.html#start";
+			//http://www.wrox.com/illegal%20value.html#start
+			console.log(encodeURI(str));
+			//http%3A%2F%2Fwww.wrox.com%2Fillegal%20value.html%23start
+			console.log(encodeURIComponent(str))
+		</script>
+	</body>
+</html>
+<!--
+	两个方法的作用：对url编码，发送给浏览器，有效的url中不能包含某些字符，比如空格
+	encodeUrl不会对本身属于url的特殊字符编码
+	encodeURLComponent会对任何非标准字符进行编码
+-->

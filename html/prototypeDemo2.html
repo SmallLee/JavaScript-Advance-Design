@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			function Person(){
+				
+			};
+			Person.prototype.name = "zhangsan";
+			var p1 = new Person();
+			var p2 = new Person();
+			p1.age = 12;
+			console.log(p1.hasOwnProperty("name"));//false
+			console.log("name" in p1);
+			
+			console.log(hasPrototypePropery(p1,"name"));
+			
+			//判断属性是否只在原型中
+			function hasPrototypePropery(obj,name){
+				return !obj.hasOwnProperty(name)&&(name in obj);
+			}
+		</script>
+	</body>
+</html>
+<!--
+	in:
+	用法：属性 in 对象
+	当通过对象能够访问属性时，返回true
+	
+	如何判断属性是否只在原型中：
+	通过in能访问并且自身实例中没有这个属性
+	
+-->

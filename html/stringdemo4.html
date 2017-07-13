@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var text = "bat,cat,sat,fat";
+			var pattern = /.at/g;
+			var matches = text.match(pattern);
+			console.log(matches.index)
+			console.log(matches.length);//4
+			console.log(matches[1]);//cat
+			var str = "hello world";
+			console.log(str.search(/o/));//4
+
+		</script>
+	</body>
+</html>
+<!--
+	index声明的是匹配的文本的起始位置在字符串中的位置，当加了全局匹配时，返回undefined
+	search方法检索第一个匹配字符串的索引
+	
+-->

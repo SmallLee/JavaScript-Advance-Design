@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			String.prototype.startsWith = function(text){
+				return this.indexOf(text)==0;
+			}
+			var str = "abcdefg";
+			console.log(str.startsWith('a'));;//true
+		</script>
+	</body>
+</html>

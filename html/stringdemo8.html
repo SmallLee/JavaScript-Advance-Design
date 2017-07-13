@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var str = "yellow";
+			console.log(str.localeCompare("hello"));//1
+			console.log(str.localeCompare("yellow"));//0
+			console.log(str.localeCompare("zero"));//-1
+			var result = String.fromCharCode(101,102,103);
+			console.log(result);//efg
+		</script>
+	</body>
+</html>
+<!--
+	localCompare:如果字符串在参数之前，则返回一个负数
+	fromCharCode:根据字符编码转化为字符串
+	
+-->

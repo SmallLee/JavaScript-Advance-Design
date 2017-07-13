@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			function Person(){
+				
+			};
+			Person.prototype.name = "zhangsan";
+			Person.prototype.age = 12;
+			Person.prototype.say = function(){
+				alert("say");
+			}
+			var keys = Object.keys(Person.prototype);
+			console.log(keys);//name,age,say
+			
+			var p1 = new Person();
+			p1.name= "li";
+			p1.age = 122;
+			var p1keys = Object.keys(p1);
+			console.log(p1keys);//name,age
+			
+			var keys = Object.getOwnPropertyNames(Person.prototype);
+			console.log(keys);//constructor,name,age,say
+			//constructor不可枚举
+		</script>
+	</body>
+</html>
+<!--
+	kyes:接受一个对象作为参数，返回可枚举的属性
+	getOwnPropertyNames：返回所有属性，包括不可枚举的
+-->

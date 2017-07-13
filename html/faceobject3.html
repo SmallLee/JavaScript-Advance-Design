@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var book = {
+				_year:2004,
+				edition:1
+			}
+			Object.defineProperty(book,"year",{
+				get:function(){
+					return this._year;
+				},
+				set:function(newValue){
+					this._year= newValue;
+					this.edition += newValue - 2004;
+				}
+			});
+			book.year = 2005;
+			console.log(book._year);//2005
+			console.log(book.edition);//2
+		</script>
+	</body>
+</html>
+<!--
+	访问器属性4个特征：
+	1.configurable
+	2.enumerable
+	3.get
+	4.set
+	
+	get和set不一定非要同时指定
+-->

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			function Person(){
+				
+			};
+			Person.prototype = {
+				name:"ad",
+				age:12,
+				say:function(){
+					console.log("say")
+				}
+			}
+			var p1 = new Person();
+			//改变了constructor的指向，不再指向Person
+			console.log(p1.constructor==Object);//true
+		</script>
+	</body>
+</html>

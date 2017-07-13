@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			function Person(){
+				
+			};
+			Person.prototype = {
+				constructor:Person,
+				name:"ad",
+				friends:['jack','lily'],
+				say: function(){
+					console.log(this.name);
+				}
+			}
+			var p1= new Person();
+			var p2 =new Person();
+			p1.name = "aa";
+			p1.friends.push('bobo');
+			alert(p2.friends);//p2的属性收到了影响
+			alert(p1.friends===p2.friends);//true
+			alert(p1.name===p2.name);//false
+		</script>
+	</body>
+</html>
+<!--
+	原型对象的问题
+	1.所有实例默认会取得相同的属性值，这在一定程度上带来了不便
+	2.当原型对象中有引用类型属性时，通过一个实例修改这个属性，会影响到其他新的实例
+-->

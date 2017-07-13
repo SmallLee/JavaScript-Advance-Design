@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var person = {};
+			Object.defineProperty(person,"name",{
+				writable:false,
+				value:"zhangsan",
+				configurable:false,
+				enumerable:false
+			});
+			console.log(person.name);//zhangsan
+			person.name="adf";
+			console.log(person.name);//zhangsan
+			delete person.name;
+			console.log(person.name);//undefined
+			//Uncaught TypeError: Cannot redefine property: name"	
+//			Object.defineProperty(person,"name",{
+//				writable:false,
+//				value:"zhangsan",
+//				configurable:true,
+//				enumerable:false
+//			});
+		</script>
+	</body>
+</html>
+<!--
+	有两种属性：数据属性和访问器属性
+	configurable:能否通过delete修改对象属性
+	writeable:能否修改属性的值
+	enumerable:能否通过for-in遍历属性
+	1.使用字面量直接创建对象，上面的属性默认值都是true
+	2.在使用Object.defineProperty定义对象时，如果不指定上面的属性，则默认值为false
+	可以多次调用Object.defineProperty修改同一个属性，但在把configurable
+	设置为false之后就会有限制了，会报异常
+-->

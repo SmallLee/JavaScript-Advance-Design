@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var str= "hello ";
+			var result = str.concat("world");
+			console.log(result);//hello world
+			console.log(str);//hello
+			str = "how old are you";
+			console.log(str.slice(0,3))
+			console.log(str.substr(0,3));
+			console.log(str.substring(0,3));
+		</script>
+	</body>
+</html>
+<!--
+	concat:接收多个参数，进行字符串拼接
+	slice和subtring接受两个参数，分别是起始和结束位置，substr第一个参数是起始位置，
+	第二个参数是字符串长度，
+	substring是将两个参数中的较小的一个作为起始位置
+	当接收的参数是负数时，slice会将它字符串的长度与对应的负数相加，结果作为参数；substr则仅仅是
+	将第一个参数与字符串长度相加后的结果作为第一个参数；substring则干脆将负参数都直接转换为0。
+	
+-->

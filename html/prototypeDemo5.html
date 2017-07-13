@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function Person(){
+				
+			};
+			var p1 = new Person();
+			Person.prototype.say =function(){
+				alert('hi');
+			};
+			p1.say();
+			
+			//如果重写整个原型，则
+			var p1 = new Person();
+			//重写原型对象
+			Person.prototype = {
+				name:"adf",
+				do:function(){
+					alert("say");
+				}
+			}
+			
+//			p1.do();报错，p1所指向的原型中不存在do这个方法
+		</script>
+	</body>
+</html>
+<!--
+	原型对象上所做的修改能够立即从实例反映出来
+	
+-->
