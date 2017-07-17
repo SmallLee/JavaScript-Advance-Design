@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!--寄生原型模式-->
+		<script>
+			function Person(name,age){
+				var o = new Object();
+				o.name = name;
+				o.age = age;
+				o.sayName =  function(){
+					alert(this.name);
+				}
+				return o;
+			}
+			var p = new Person("a",22);
+//			p.sayName();
+			
+			function SpecialArray(){
+				var values = new Array();
+				values.push.apply(values,arguments);
+				values.toString = function(){
+					return this.join("|");
+				}
+				return values;
+			}
+			var sa = new SpecialArray("red",2,"blue");
+			console.log(sa.toString());
+		</script>
+	</body>
+</html>
+<!--
+	构造函数中返回的对象和构造函数或者构造函数的原型之间没有什么关系，因此不能用
+	instanceOf操作符判断类型
+	
+-->

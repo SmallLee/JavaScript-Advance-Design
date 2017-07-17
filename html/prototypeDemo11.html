@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!--原型的问题-->
+		<script>
+//			function SuperType(){
+//				this.color = ["red","green"];
+//			}
+//			function SubType(){
+//				
+//			}
+//			SubType.prototype = new SuperType();
+//			
+//			var s1 = new SubType();
+//			s1.color.push("s1");
+//			console.log(s1.color);//red,green,s1"
+//			var s2 = new SubType();
+//			console.log(s2.color);//red,green,s1"
+			function SuperType(){
+				this.color = ["red","green"];
+			}
+			function SubType(){
+				//调用超类的构造函数,继承了SuperType
+				SuperType.call(this);
+			}
+			SubType.prototype = new SuperType();
+			
+			var s1 = new SubType();
+			s1.color.push("s1");
+			console.log(s1.color);//red,green,s1"
+			var s2 = new SubType();
+			console.log(s2.color);//red,green"
+		</script>
+	</body>
+</html>
+<!--
+	问题：
+	1.包含引用类型的实例在变成原型以后，会使得所有对象共享属性
+		解决：借用构造函数
+	2.在创建子类型的实例时，不能够向超类型的构造函数中传递参数
+	
+-->
+	
+	

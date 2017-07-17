@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			function SuperType(){
+				this.property = false;
+			}
+			SuperType.prototype.getSuperValue = function(){
+				return this.property;
+			}
+			function SubType(){
+				this.subproperty = true;
+			}
+			SubType.prototype.getSUbValue = function(){
+				return this.subproperty;
+			}
+			
+			SubType.prototype = new SuperType();
+			//给原型添加新方法
+			SubType.prototype.getAge = function(){
+				return 2;
+			}
+			//错误
+//			SubType.property = {
+//				getAge: function(){
+//					alert("a");
+//				}
+//			}
+			
+			var instance = new SubType();
+			
+			console.log(instance.getAge())
+			
+		</script>
+	</body>
+</html>
+<!--
+	注意
+	1.给原型添加方法的代码要放到替换原型的后面中去，否则会出现无法访问到方法的情况，
+	因为改变了原型的指向
+	2.通过原型链实现继承是，不能通过字面量的方式创建原型方法，因为这样会重写原型链
+	
+-->

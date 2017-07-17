@@ -9,8 +9,25 @@
 			function Person(name,age){
 				this.name = name;
 				this.age = age;
+				this.friends = ["bobo","jack"]
 			}
-			
+			Person.prototype = {
+				constructor:Person,
+				sayName:function(){
+					console.log(this.name)
+				}
+			}
+			var p1 = new Person("zhangsan",33);
+			var p2 = new Person("lisi",22);
+			p1.friends.push("pp");
+			console.log(p1.friends);//bobo,jack,pp
+			console.log(p2.friends);//bobo,jack
+			console.log(p1.friends==p2.friends);//false
+			console.log(p1.sayName==p2.sayName)//true
 		</script>
 	</body>
 </html>
+<!--
+	实例属性定义在构造函数中，共享的属性construtor和方法定义在原型中
+	
+-->

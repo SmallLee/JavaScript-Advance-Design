@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!--寄生式继承-->
+		<script>
+			function createAnother(origin){
+				var clone = Object.create(origin);
+				clone.sayHi = function(){
+					console.log("hi");
+				}
+				return clone;
+			}
+			
+			var person = {
+				name:"a",
+				friends:["nick","bobo"]
+			};
+			var p = createAnother(person);
+			p.sayHi();
+			console.log(p.name);//a
+		</script>
+	</body>
+</html>

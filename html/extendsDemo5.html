@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!--寄生组合式继承-->
+		<script>
+			function SuperType(name){
+				this.name = name;
+				this.color = ["red","blue"];
+			}
+			SuperType.prototype.sayName = function(){
+				alert(this.name);
+			}
+			function SubType(name){
+				SuperType.call(this);
+				this.age = age;
+			}
+			
+			inheiritPrototype(SuperType,SubType);
+			
+			SubType.prototype.sayAge = function(){
+				console.log(this.age)
+			}
+			
+			function inheiritPrototype(supertype,subtype){
+				var prototype = Object.create(supertype.prototype);
+				prototype.constructor= subtype;
+				subtype.prototype = prototype;
+			}
+		</script>
+	</body>
+</html>
+<!--
+	组合式继承会调用两次超类的构造函数
+	
+-->

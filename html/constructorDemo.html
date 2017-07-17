@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!--
+			稳妥构造函数
+		-->
+		<script>
+			function Person(name,age){
+				var o = new Object();
+				o.sayName = function(){
+					console.log(name)
+				}
+				return o;
+			}
+			var p = Person("a",22);
+			p.sayName();
+		</script>
+	</body>
+</html>
+<!--
+	稳妥对象：
+	没有公共属性，
+	方法不引用this对象
+	适合在安全环境中使用
+-->

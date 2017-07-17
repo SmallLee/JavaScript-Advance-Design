@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!--原型式继承-->
+		<script>
+			var person = {
+				name:"zhangsan",
+				color:["red","green"]
+			}
+			var personone = Object.create(person);
+			personone.name = "aa";
+			personone.color.push("one");
+			var persontwo = Object.create(person);
+			persontwo.name = "bb";
+			persontwo.color.push("two");
+			
+			console.log(person.name);//zhangsan
+			console.log(person.color);//red,green,one,two
+		</script>
+	</body>
+</html>
+<!--
+	Object.create
+	原型式继承
+	
+-->

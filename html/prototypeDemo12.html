@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!--借用构造函数传递参数-->
+		<script>
+			function SuperType(name){
+				this.name = name;
+			}
+			function SubType(){
+				//继承了SuperType,而且还传递了参数
+				SuperType.call(this,'nick');
+				this.age = 20;
+			}
+			SubType.prototype = new SuperType();
+			var s1 = new SubType();
+			console.log(s1.name);//nick
+			console.log(s1.age);//20
+		</script>
+	</body>
+</html>
+<!--
+	通过构造函数和以向超类的构造函数传递参数
+	
+	借用构造函数的问题：
+	1.方法都定义在构造函数中，无法复用
+	2.在超类原型中定义的方法，子类无法可见
+	
+-->
