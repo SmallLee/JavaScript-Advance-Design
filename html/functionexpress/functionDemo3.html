@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+//			function getResult(){
+//				var arr = new Array();
+//				for (var i = 0; i < 10; i++) {
+//					arr[i] = function(){
+//						return i;
+//					}
+//				}
+//				return arr;
+//			}
+//			function getResult(){
+//				var arr = new Array();
+//				for (var i = 0; i < 10; i++) {
+//					arr[i] = function(num){
+//						return function(){
+//							return num;
+//						}
+//					}(i)
+//				}
+//				return arr;
+//			}
+//			//返回的是数组，每个数组元素是一个函数
+//			var result = getResult();
+//			for (var i = 0; i < result.length; i++) {
+//				console.log(result[i]())
+//			}
+//			
+			//函数自执行
+			(function(num){
+				alert(num);
+			})(3);
+		</script>
+	</body>
+</html>
+<!--
+	闭包只能取得包含函数中变量的最后一个值
+	
+-->

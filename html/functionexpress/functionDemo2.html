@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+//			function getNum(num){
+//				if (num <= 1) {
+//					return 1;
+//				} else {
+//					return num * getNum(num - 1);
+//				}
+//			}
+//			function getNum(num){
+//				"use strict"
+//				if (num <= 1) {
+//					return 1;
+//				} else {
+//					return num * arguments.callee(num-1);
+//				}
+//			}
+			var getNum = 
+				function f(num){
+					if (num <1){
+						return 1;
+					} else {
+						return num * f (num -1);
+					}
+				}
+			console.log(getNum(3));
+		</script>
+	</body>
+</html>
+<!--
+	arguments.callee指向正在运行函数的指针
+	严格模式下，不能访问，可以使用命名函数实现递归
+	'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions 
+	or the arguments objects for calls to them"
+-->
