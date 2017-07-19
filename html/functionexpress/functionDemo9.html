@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var application = function(){
+				var components = new Array();
+				components.push("aa");
+				//单例是BaseCompoent的实例
+				var app = new BaseCompoent();
+
+				app.getComponentLength = function(){
+					return components.length;
+				},
+				app.registerComponent = function(compo){
+					if (typeof compo == "object"){
+						components.push(compo);
+					}
+				}
+				//返回副本
+				return app;
+			}
+		</script>
+	</body>
+</html>
+<!--
+	增强模块模式
+		适合单例是某种类实例的情况
+-->

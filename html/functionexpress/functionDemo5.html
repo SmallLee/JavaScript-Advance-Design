@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+//			function getCount(count) {
+//				for (var i = 0; i < count; i++) {
+//					console.log(i)
+//				}
+//				//变量i是定义在getCount函数的活动对象中的,所以此处可以访问到
+//				console.log("=="+i)
+//			}
+//			getCount(2);
+			//======================
+			function getCount2(count){
+				(function(){
+					for (var i = 0; i < count; i++) {
+						console.log(i);//块级作用域
+					}
+				})();
+				//Uncaught ReferenceError: i is not defined
+//				console.log("===2"+i)
+			}
+			getCount2(3)
+		</script>
+	</body>
+</html>
+<!--
+	JavaScript没有块级作用域的概念，在语句快中定义的变量，实际上
+	是在函数中的，在语句块外面也可以访问
+	
+-->

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			(function(){
+				var privateVariable= 10;
+				function privateFunc(){
+					
+				}
+				MyObject = function(){
+					
+				}
+				MyObject.prototype.publicMethod = function(){
+					privateVariable++;
+					console.log(privateVariable);
+					return privateFunc();
+				}
+			})();
+			
+			var obj = new MyObject();
+			obj.publicMethod();
+		</script>
+	</body>
+</html>
+<!--
+	函数声明只能创建局部对象
+	函数表达式能创建全局对象
+	
+	这个模式与在构造函数中定义特权方法的主要区别：
+	私有变量和函数是由实例共享的
+-->

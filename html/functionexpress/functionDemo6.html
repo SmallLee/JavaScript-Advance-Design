@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			function MyObject(){
+				var privateVariable = 10;
+				function privateFunc(){
+					console.log("私有方法")
+				}
+				//闭包，特权方法，有权访问在构造函数中定义的私有变量和函数
+				this.publicMethod = function(){
+					privateVariable++;
+					console.log(privateVariable)
+					return privateFunc();
+				}
+			}
+			var obj = new MyObject();
+			obj.publicMethod();
+		</script>
+	</body>
+</html>
+<!--
+	有权访问私有变量和私有函数的方法叫做特权方法
+	
+	在构造函数中定义特权方法的缺点：
+		必须使用构造函数来定义对象，
+		这样针对每个实例都会创建同样一组方法。
+	
+-->

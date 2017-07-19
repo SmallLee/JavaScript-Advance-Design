@@ -5,5 +5,17 @@
 		<title></title>
 	</head>
 	<body>
+		<script type="text/javascript">
+			var name = "window";
+			var obj = {
+				name: "object",
+				sayName :function(){
+					return function(){
+						return this.name;
+					}
+				}
+			}
+			console.log(obj.sayName()());//window
+		</script>
 	</body>
 </html>

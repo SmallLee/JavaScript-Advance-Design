@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+//			var singleton = function(){
+//				var privateVariable = 10;
+//				function privateFunc(){
+//					return false;
+//				}
+//				return{
+//					publicProperty:2,
+//					publicMethod: function(){
+//						privateVariable++;
+//						return privateFunc();
+//					}
+//				}
+//			}
+			var application = function(){
+				var components = new Array();
+				components.push("aa");
+				return {
+					getComponentLength : function(){
+						return components.length;
+					},
+					registerComponent: function(compo){
+						if (typeof compo == "object"){
+							components.push(compo);
+						}
+					}
+				}
+			}
+			var app = application();//获取返回的对象
+			app.registerComponent(null);//注册组件
+			console.log(app.getComponentLength());//2
+		</script>
+	</body>
+</html>
+<!--
+	模块模式：
+	创建一个对象并以某些数据对其初始化，同时还要公开一些访问这些数据的方法，那么就可以使用
+	模块方式
+-->
