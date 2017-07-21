@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="button"  value="打开" onclick="openNew()"/>
+		<script>
+			function openNew(){
+//				var newWindow = window.open("https://www.baidu.com","_blank");
+//				if (newWindow == null) {
+//					alert("被浏览器内置程序阻止了");
+//				}
+				var blocked = false;
+				try{
+					var newWindow = window.open("https://www.baidu.com","_blank");
+					if (newWindow == null) {
+						blocked = true;
+					}
+				}catch(e){
+					blocked = true;
+				}
+				if (blocked == true) {
+					alert("打开新窗口失败")
+				}
+			}
+		</script>
+	</body>
+</html>
+<!--
+	如果被浏览器内置程序屏蔽，那么window.open会返回null
+	如果被其他程序屏蔽，那么window.open会抛出异常
+	
+-->

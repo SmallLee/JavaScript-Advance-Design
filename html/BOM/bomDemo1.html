@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			function getWindowAttr(){
+				for(var p in window){
+					document.write(p +"--"+window[p]+"</br>")
+				}
+			}
+			getWindowAttr();
+		</script>
+	</body>
+</html>
+<!--
+	在网页中定义的任何一个变量，对象，函数，都1以window作为Global对象
+-->

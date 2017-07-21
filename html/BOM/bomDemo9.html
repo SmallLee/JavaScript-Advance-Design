@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="button" value="打开窗口" onclick="openNew()" />
+		<input type="button" value="关闭窗口" onclick="closeNew()" />
+		<script>
+			var newWindow;
+			function openNew(){
+				newWindow = window.open("http://www.imooc.com/","_blank");
+				console.log(newWindow.closed);//false
+			}
+			function closeNew() {
+				newWindow.close();
+				console.log(newWindow.closed);//true
+			}
+
+		</script>
+	</body>
+</html>
+<!--
+	window.open没反应
+	window.open返回来一个对象，通过这个对象可以控制新打开的窗口
+	
+	不能命名函数名称与系统名称一样，会不起作用
+	
+-->

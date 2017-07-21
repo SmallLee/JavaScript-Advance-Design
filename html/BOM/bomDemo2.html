@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var age = 10;
+			//sayAge是定义在全局环境中的，所有this指向window
+			function sayAge(){
+				alert(this.age);
+			}
+			console.log(window.age)
+			sayAge()
+			window.sayAge()
+		</script>
+	</body>
+</html>

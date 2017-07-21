@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<frameset rows="160,*">
+			<frame src="bomDemo1.html" name="top"/>
+			<frameset>
+				<frame src="bomDemo2.html" name="left"/>
+				<frame src="bomDemo3.html" name="right"/>
+			</frameset>
+		</frameset>
+		<input type="button" onclick="check()" value="检查" />
+		<script>
+//			alert(window.self==window);//true
+			function check(){
+				if(window.self==window.top){
+					alert("true");
+				}
+			}
+		</script>
+	</body>
+</html>
+<!--
+	window.self:当前窗口的引用，和window是等价的
+	window.top：顶层窗口，浏览器窗口
+-->

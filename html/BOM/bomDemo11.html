@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			//2秒后弹出a
+//			var timeoutId = setTimeout("alert('a')",2000);
+			//根据id取消执行
+//			clearTimeout(timeoutId);
+			
+			var num = 0;
+			var max = 10;
+			function increamental(){
+				num ++;
+				if (num < max) {
+					setTimeout(increamental,500);
+				}else{
+					alert("done")
+				}
+			}
+			setTimeout(increamental,500)
+		</script>
+	</body>
+</html>
+<!--
+	在开发环境中，很少使用setInterval,因为后一个调用可能在前一个调用
+	结束前启动
+-->

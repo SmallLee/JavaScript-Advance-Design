@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var age = 29;
+			window.color = "red";
+			
+			delete window.age;
+			delete window.color;
+			
+			console.log(age);//29
+//			console.log(color)报错
+			//=======================
+			
+//			var value = oldValue;报错，未定义
+			//
+			var value =window.oldVaule;
+			alert(value);//undefined
+		</script>
+	</body>
+</html>
+<!--
+	全局变量不能通过delete删除，因为configurable为false,
+	而定义在window上的变量可以通过delete删除，
+	再次访问就出错了
+-->

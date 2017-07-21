@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="button" value="移动窗口" onclick="move()"/>
+		<script>
+			var left = (typeof window.screenLeft=="number") ?
+			window.screenLeft : window.screenX;
+			var top = (typeof window.screenTop == "number") ?
+			window.screenTop : window.screenY;
+			
+			alert(left+"--"+top)
+			function move(){
+				window.moveTo(0,0);
+			}
+		</script>
+	</body>
+</html>

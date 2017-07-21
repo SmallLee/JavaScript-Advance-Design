@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var pageWidth = window.innerWidth;
+			var pageHeight = window.innerHeight;
+			if (typeof pageWidth != "number") {
+				if (document.compatMode == "CSS1Compat") {
+					pageWidth = document.documentElement.clientWidth;
+					pageHeight = document.documentElement.clientHeight;
+				} else {
+					pageWidth = document.body.clientWidth;
+					pageHeight = document.body.clientHeight;
+				}
+			}
+			//获取窗口大小
+			alert(pageWidth+"--"+pageHeight)
+		</script>
+	</body>
+</html>
+<!--
+	document.compatMode用来判断当前浏览器采用的渲染方式。
+
+官方解释：
+
+BackCompat：标准兼容模式关闭。
+CSS1Compat：标准兼容模式开启。
+
+当document.compatMode等于BackCompat时，浏览器客户区宽度是document.body.clientWidth；
+当document.compatMode等于CSS1Compat时，浏览器客户区宽度是document.documentElement.clientWidth。
+
+浏览器客户区高度、滚动条高度、滚动条的Left、滚动条的Top等等都是上面的情况
+	
+-->

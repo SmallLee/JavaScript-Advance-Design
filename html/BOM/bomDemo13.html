@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+//			location.search = "?name=li&&age=10";
+			//获取当前页面链接的参数
+			function getQueryStringargs(){
+				var qs = location.search.length > 0 ? location.search.substring(1) : "" ;
+				args = {};
+				items = qs.length > 0 ?qs.split("&") : [];
+				item= null;
+				name = null;
+				value = null;
+				i = 0;
+				len = items.length;
+				//逐个将每一项添加到args中
+				for (var i = 0; i < len; i++) {
+					item = items[i].split("=");
+					name = decodeURIComponent(item[0]);
+					value = decodeURIComponent(item[1]);
+					if (name.length) {
+						args[name] = value;
+					}
+				}
+				return args;
+			}
+			var args = getQueryStringargs();
+			console.log(args["__hbt"])
+		</script>
+	</body>
+</html>
