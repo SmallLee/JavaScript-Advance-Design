@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<ul id="list">
+			<li>item1</li>
+			<li>item2</li>
+			<li>item3</li>
+		</ul>
+		<script>
+			var myList = document.getElementById("list");
+//			var cloneList = myList.cloneNode(true);
+//			console.log(cloneList.childNodes.length);//7
+			var cloneList = myList.cloneNode(false);
+			console.log(cloneList.childNodes.length);//0
+		</script>
+	</body>
+</html>
+<!--
+	cloneNode(true):深复制，复制节点及其整个子节点树
+	cloneNode(false):只复制节点本身
+-->

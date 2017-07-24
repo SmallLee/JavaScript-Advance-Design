@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body id="parent">
+		<script>
+			var parent = document.getElementById("parent");
+			var ep = document.createElement("p");
+			console.log(parent.childNodes.length);//2
+			parent.appendChild(ep);
+			console.log(parent.childNodes.length);//3
+			//移除指定的节点
+			parent.removeChild(ep);
+			console.log(parent.childNodes.length);//2
+		</script>
+	</body>
+</html>

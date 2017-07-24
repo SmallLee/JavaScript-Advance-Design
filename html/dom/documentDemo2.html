@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body id="parent">
+		<script>
+			var parent = document.getElementById("parent")
+			var ep = document.createElement("p");
+			parent.insertBefore(ep,parent.firstChild);
+			console.log(parent.childNodes[0].nodeName);//p
+		</script>
+	</body>
+</html>
+<!--
+	insertBefore:插入元素到指定元素前面
+	insertBefore(newNode,null);成为最后一个节点
+	insertBefore(newNode,someNode.firstChild);成为第一个节点
+	insertBefore(newNode,someNode.lastChild);成为最后一个节点
+-->

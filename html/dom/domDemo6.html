@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var html  = document.documentElement;
+//			console.log(document.childNodes.length);//2
+//			console.log(document.childNodes[1]===html);//true
+//			console.log(document.lastChild===html);//true
+			
+		//==========================
+//		var body = document.body;
+//		console.log(body.childNodes.length)
+//		console.log(body===html.lastChild)//true
+		//=====================
+		var doctype = document.doctype;
+		console.log(doctype.nodeName);//html，获取DOCTYPE后面的值
+		</script>
+	</body>
+</html>
+<!--
+	<!DOCTYPE html>:对应DocumentType节点
+	注释对应Comment节点
+	
+-->

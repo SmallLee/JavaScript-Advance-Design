@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<img name="cat" src="../../img/cat.jpg" style="width: 100px;height: 100px;"/>
+		<script>
+			var imgs = document.getElementsByTagName("img");
+			console.log(imgs);//[object HTMLCollection]
+			var item = imgs.namedItem("cat");
+			console.log(item.src)
+//			var imgs2 = document.getElementsByName("img");
+//			console.log(imgs2);//[object NodeList
+		</script>
+	</body>
+</html>
+<!--
+	namedItem(name):通过name属性获得集合中的某个元素
+	
+-->

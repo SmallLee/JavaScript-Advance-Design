@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body id="app">
+		<script>
+			var  ep= document.createElement("p");
+			ep.innerText = "我是p标签";
+			ep.style.color = "green";
+			var parent = document.getElementById("app");
+			parent.appendChild(ep);
+//			console.log(ep.nodeType);//1
+//			console.log(ep.nodeName);//p
+//			console.log(ep.nodeValue);//null
+			console.log(parent.childNodes.item(2));
+			alert(parent.lastChild==ep);//true
+		</script>
+	</body>
+</html>
+<!--
+	节点类型：
+	
+	1:元素节点
+		对于元素节点，nodeName代表标签名，nodeType是null
+	2.属性节点
+	3.文本节点
+	
+	appendChild:插入到父节点最后
+	
+	访问子节点方式：
+		
+		parent.childNodes.item(0)
+		parent.childNodes[0]
+	
+-->

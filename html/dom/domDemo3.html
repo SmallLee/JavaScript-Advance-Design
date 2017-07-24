@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body id="parent">
+		<script>
+			var parent = document.getElementById("parent")
+			var ep = document.createElement("p");
+			console.log(parent.firstChild.nodeName);//#text
+			//替换第一个元素
+			parent.replaceChild(ep,parent.firstChild);
+			console.log(parent.firstChild.nodeName);//p
+		</script>
+	</body>
+</html>

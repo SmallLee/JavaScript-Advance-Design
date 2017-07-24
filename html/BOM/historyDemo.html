@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<a href="https://www.baidu.com">百度一下</a>
+		<input type="button" value="后退" onclick="houtui()" />
+		<input type="button" value="前进" onclick="qianjin()" />
+		<script>
+			//后退一页
+			function houtui(){
+				history.go(-1);
+			}
+			function qianjin(){
+				history.go(1);
+			}
+			console.log(history.length)
+		</script>
+	</body>
+</html>
