@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="app">div中的内容</div>
+		<script>
+			var app = document.getElementById("app");
+			console.log(app.firstChild.nodeType);//3
+			console.log(app.firstChild.nodeName);//#text
+			console.log(app.firstChild.nodeValue);//div中的内容
+			console.log(app.firstChild.data);//div中的内容
+			//添加数据
+			app.firstChild.appendData("ad")
+			app.firstChild.nodeValue = "some<strong>强调的文字</strong>";
+			console.log(app.firstChild.nodeValue)
+		</script>
+	</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="app" title="我是title">你好吗</div>
+		<script>
+			var app = document.getElementById("app");
+			var nodename = app.attributes.getNamedItem("id").nodeValue;
+			nodename = app.attributes["id"].nodeValue;
+			console.log(nodename);//app
+			
+			function outputAttributes(element){
+				var pairs = new Array(),
+				i,
+				len,
+				attrName,
+				attrValue
+				;
+				for (i = 0,len= element.attributes.length; i < len; i++) {
+					attrName= element.attributes[i].nodeName;
+					attrValue= element.attributes[i].nodeValue;
+					//确保返回指定的属性
+					if(element.attributes[i].specified) {
+						pairs.push(attrName+"-\""+attrValue+"\"");
+					}
+				}
+				return pairs.join(" ");
+			}
+			var result = outputAttributes(app);
+			console.log(result);//id-app,title-我是title
+		</script>
+	</body>
+</html>
+<!--
+	attributes获得所有的属性
+	getNamedItem
+	removeNamedItem
+	setNamedItem
+	item(pos)
+	
+-->

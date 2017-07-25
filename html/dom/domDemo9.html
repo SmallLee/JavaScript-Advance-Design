@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<a href="www.baidu.com" name="baidu">百度一下</a>
+		<form action="#" method="post">
+			
+			<input type="submit" value="提交"/>
+		</form>
+		<script>
+			//带有name的a标签
+			var anchors = document.anchors;
+			console.log(anchors);//[object HTMLCollection]"
+			//form表单
+			var forms = document.forms;
+			console.log(forms.item(0).action)
+			//所有带href的a标签
+			var links = document.links;
+			console.log(links.item(0).href)
+		</script>
+	</body>
+</html>

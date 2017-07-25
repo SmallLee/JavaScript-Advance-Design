@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<ul id="app">
+			<li>item1</li><li>item2</li><li>item3</li>
+		</ul>
+		<script>
+			var div = document.createElement("div");
+			div.innerText = "我是div";
+			document.body.appendChild(div)
+			var app = document.getElementById("app");
+//			console.log(app.childNodes.length);//5
+			for (var i = 0; i < app.childNodes.length; i++) {
+				if(app.childNodes[i].nodeType==1){
+					//打印三个LI,元素节点
+					console.log(app.childNodes[i].nodeName)
+				}
+			}
+		</script>
+	</body>
+</html>

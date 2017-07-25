@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="app">mydiv</div>
+		<script>
+			var app = document.getElementById("app");
+			console.log(app.nodeName);//DIV
+			console.log(app.tagName)
+			console.log(app.nodeName===app.tagName);//true
+		</script>
+	</body>
+</html>
+<!--
+	在HTML中，标签名始终是大写表示
+	nodeName和tagName会返回相同的值
+-->

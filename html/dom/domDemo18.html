@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var element = document.createElement("div");
+			element.className = "content";
+			var textNode = document.createTextNode("Hello World");
+			element.appendChild(textNode);
+			document.body.appendChild(element);
+			
+			var newnode = element.firstChild.splitText(5);
+			console.log(element.firstChild.nodeValue);//Hello
+			console.log(newnode.nodeValue);// World
+		</script>
+	</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href=""/>
+	</head>
+	<body>
+		<div id="app">我是div的内容</div>
+		<input type="button" value="改变文字大小" onclick="changeFont()" />
+		<script>
+			var link = document.createElement("link");
+			var head = document.getElementsByTagName("head")[0];
+			link.rel="stylesheet";
+			link.type="text/css";
+			link.href="../../css/content.css";
+			function changeFont(){
+				head.appendChild(link)
+			}
+		</script>
+	</body>
+</html>

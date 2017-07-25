@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="app" class="md" title="我是div" dir="ltr">我不知道</div>
+		<script>
+			var app = document.getElementById("app");
+			console.log(app.className);
+			console.log(app.title);
+			console.log(app.dir);
+			//获取属性
+			console.log(app.getAttribute("class"));//md
+			app.setAttribute("title","hahh");
+		</script>
+	</body>
+</html>
+<!--
+	getAttribute:获得属性
+	setAttribute：设置属性
+	removeAttribute:删除属性
+	
+-->

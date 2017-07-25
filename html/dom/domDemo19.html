@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="button" value="动态加载js" onclick="loadJs()" />
+		<script type="text/javascript">
+			var script = document.createElement("script");
+			script.type = "text/javascript";
+			script.src= "../../js/dynamic.js";
+			function loadJs(){
+				document.body.appendChild(script)
+			}
+		</script>
+	</body>
+</html>
