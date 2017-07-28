@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div class="a b c" id="app">内容</div>
+		<script>
+			var app = document.getElementById("app");
+			console.log(app.classList.length);//3
+			for (var i = 0; i < app.classList.length; i++) {
+				console.log(app.classList[i])
+			}
+		</script>
+	</body>
+</html>
+<!--
+	classList:类的集合
+	
+-->

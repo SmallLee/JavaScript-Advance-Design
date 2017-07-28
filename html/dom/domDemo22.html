@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div class="header">头部</div>
+		<div class="content">内容</div>
+		<script>
+			var names = document.getElementsByClassName("header");
+			console.log(names.length)
+			for (var i = 0; i < names.length; i++) {
+				console.log(names[i].innerHTML)
+			}
+		</script>
+	</body>
+</html>
+<!--
+	getElementsByClassName:根据类名查找元素
+	
+-->

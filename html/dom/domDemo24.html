@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="mybutton">按钮</button>
+		<script>
+			//默认获取焦点的元素是body
+			console.log(document.activeElement==document.body);//true
+			var mybutton = document.getElementById("mybutton");
+			mybutton.focus();
+			console.log(document.hasFocus());
+			console.log(document.activeElement==mybutton);//true
+//			setInterval(function(){
+//				console.log(document.hasFocus())
+//			},2000);
+	</script>
+	</body>
+</html>
+<!--
+	activeElement:获取当前正在获得焦点的控件
+	document.hasFocus:文档或者其中的元素是否获取了焦点
+	
+-->
